@@ -41,6 +41,7 @@ if (isset($_POST['register'])) {
         $query->bindParam("cedula", $cedula, PDO::PARAM_STR);
         $result = $query->execute();
         if ($result) {
+            header("Location: index.php");
             echo '<div class="alert alert-primary" role="alert">
                     Registro exitoso!!
                     </div>';
